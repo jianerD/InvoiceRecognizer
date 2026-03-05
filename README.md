@@ -12,8 +12,8 @@
 - **机票行程单** - 航空公司行程单识别
 - **话费发票** - 移动、联通、电信运营商发票
 - **酒店发票** - 酒店住宿发票
-- **快递发票丰、中通等快递发票
--** - 顺 **车辆租赁** - 商务租车发票
+- **快递发票** - 顺丰、中通等快递发票
+- **车辆租赁** - 商务租车发票
 
 ### 暂存区功能
 - 先导入行程发票（火车票、机票）暂存
@@ -120,8 +120,8 @@ python -m invoice_cli report --excel
 ## 项目结构
 
 ```
-InvoiceRecognizer/
-├── invoice_gui.py          # GUI主程序
+Invoice invoice_gui.pyRecognizer/
+├──          # GUI主程序
 ├── invoice_cli.py           # CLI命令行工具
 ├── invoice_core/            # 核心模块
 │   ├── __init__.py
