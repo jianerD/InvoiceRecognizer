@@ -12,8 +12,8 @@
 - **机票行程单** - 航空公司行程单识别
 - **话费发票** - 移动、联通、电信运营商发票
 - **酒店发票** - 酒店住宿发票
-- **快递发票** - 顺丰、中通等快递发票
-- **车辆租赁** - 商务租车发票
+- **快递发票丰、中通等快递发票
+-** - 顺 **车辆租赁** - 商务租车发票
 
 ### 暂存区功能
 - 先导入行程发票（火车票、机票）暂存
@@ -73,7 +73,22 @@ pip install -r requirements.txt
 - pdfplumber - PDF文本提取
 - pandas - 数据处理和导出
 - openpyxl - Excel导出
+- pyinstaller - 程序封装
 - tkinter - GUI界面（Python自带）
+
+## 封装为exe（可选）
+
+如果需要将程序封装为Windows可执行文件：
+
+```bash
+# 安装封装工具
+pip install pyinstaller
+
+# 封装GUI程序
+pyinstaller --onefile --windowed --name InvoiceRecognizer --add-data "invoice_core;invoice_core" invoice_gui.py
+```
+
+封装后的文件位于 `dist/InvoiceRecognizer.exe`
 
 ## 使用方法
 
@@ -176,7 +191,7 @@ python -m invoice_cli report --excel
 - 新增暂存区功能，支持先导入行程发票再补充其他类型
 - 重构GUI界面，采用现代化设计
 - 新增CLI命令行工具支持
-- 新增话机和酒店发票识别
+- 新增话费和酒店发票识别
 - 新增快递发票识别
 - 新增统计报告导出功能
 
